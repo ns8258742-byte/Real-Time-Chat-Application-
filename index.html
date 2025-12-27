@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-box">
+    <h2>Chat Login</h2>
+    <input type="text" id="username" placeholder="Enter username">
+    <button onclick="login()">Join Chat</button>
+  </div>
+
+  <script>
+    function login() {
+      const name = document.getElementById("username").value;
+      if(name.trim() !== "") {
+        localStorage.setItem("username", name);
+        window.location.href = "chat.html";
+      }
+    }
+  </script>
+</body>
+</html>
